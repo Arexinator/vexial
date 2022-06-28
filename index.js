@@ -54,7 +54,7 @@ client.on('guildMemberRemove', member => {
     const reason = "leaving the server"
 
     member.ban({ reason })
-    client.channels.cache.get("386412293316935690").send({ embeds: [e1] })
+    client.channels.cache.get("982945903440707644").send({ embeds: [e1] })
 })
 
 client.login(settings.token).catch((error) => { client.logger.log(error, "warn") });

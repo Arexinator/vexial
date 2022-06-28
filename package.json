@@ -20,6 +20,7 @@
     "discord-gamecord": "^2.0.0",
     "discord-images": "^1.0.2",
     "discord-reply": "^0.1.2",
+    "discord-timestamps": "^0.1.4",
     "discord.js": "^13.6.0",
     "discordjs-reaction-role": "^3.0.0",
     "enmap": "^5.8.7",
