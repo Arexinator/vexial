@@ -1,22 +1,27 @@
-const settings = require("../settings.json");
+const chalk = require('chalk')
 
-module.exports = async (client) => {
+module.exports = {
+	name: "ready",
+	once: true,
 
-    client.user.setPresence({
-        status: "dnd"
-    });
-    function randomstatus() {
-        let status = [
-            `Daddy Arex`,
-        ];
-        let rstatus = Math.floor(Math.random() * status.length);
-        client.user.setActivity(status[rstatus], {
-            type: "LISTENING"
+	run: async(client) => {
+        const guild = client.guilds.cache.get('982552981423652884')
+        client.user.setPresence({
+            status: "dnd"
         });
-    };
-    setInterval(randomstatus, 15000);
-    
-    client.logger.log(`> 🔍 • Check All Server is ${client.guilds.cache.size} Server 🌐`, "info");
-    client.logger.log(`> ✅ • Successfully logged on as ${client.user.username}\n\n======================================`, "success");
+        function randomstatus() {
+            let status = [
+                `${guild.memberCount} members`,
+                `v!help`,
+                `discord.gg/ecli`
+            ];
+            let rstatus = Math.floor(Math.random() * status.length);
+            client.user.setActivity(status[rstatus], {
+                type: "WATCHING"
+            });
+        };
+        setInterval(randomstatus, 20000)
 
+        client.logger.log(`Logged in as ${client.user.username}`, "success");
+	},
 };

@@ -1,16 +1,15 @@
-const discord = module.require("discord.js");
 const ms = require('ms')
 
 module.exports = {
   name: "mute",
   aliases: ["m"],
 
-  run: async (client, message, args) => {
+  run: async(client, message, args) => {
     const allowedRoles = [
         '982556146055385099',
     ]
     const e1 = {
-        "color": 0,
+        "color": 16733525,
         "description": "<a:ec_no:990478311752859650> You do not have the required role(s) to run this command",
     }
     if (!message.member.roles.cache.hasAny(...allowedRoles)) {
