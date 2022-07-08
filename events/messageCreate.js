@@ -10,7 +10,7 @@ module.exports = {
 		let prefix = config.prefix
 	
 		let teag = new discord.MessageEmbed()
-		.setColor(config.color)
+		.setColor("#36393E")
 		.setDescription(`Hey **${message.author}**, My prefix is: \`${prefix}\``)
 
 		if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)

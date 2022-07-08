@@ -1,5 +1,3 @@
-const ms = require('ms')
-
 module.exports = {
   name: "unmute",
   aliases: ["um"],
@@ -20,26 +18,29 @@ module.exports = {
 
     const e2 = {
         "description": "<a:ec_no:990478311752859650> Please provide a user ",
-        "color": 0
-    }
-    const e3 = {
-        "description": "<a:ec_no:990478311752859650> Please provide a time",
-        "color": 0
+        "color": 16733525
     }
     const e4 = {
-        "description": `<:e_dot:985270306308489356>**Offender**: ${member} (\`${member.id}\`)\n<:e_dot:985270306308489356>**Reason**: \`${reason}\`\n<:e_dot:985270306308489356>**Time**: \`${time}\`\n<:e_dot:985270306308489356>**Moderator**: ${message.author} (\`${message.author.id}\`)`,
-        "color": 0,
-        "title": "unmute"
+        "description": `> <:ec_whitedot:994567054222962811>**Offender**: ${member} (\`${member.id}\`)\n> <:ec_whitedot:994567054222962811>**Moderator**: ${message.author} (\`${message.author.id}\`)\n> <:ec_whitedot:994567054222962811>**Moderator**: ${message.author} (\`${message.author.id}\`)\n> <:ec_whitedot:994567054222962811>**Timestamp** <t:${Math.round((new Date()).getTime() / 1000)}:F>`,
+        "color": 3553598,
+        "title": "unmute case"
+    }
+    const e6 = {
+        "description": `You were unmuted in **eclipse**.`,
+        "color": 3553598
+    }
+    const e5 = {
+        "description": `<a:ec_yes:990478257851858974> Successfully unmuted ${member}`,
+        "color": 9961045,
     }
 
     if (!member) return message.reply({ embeds: [e2], allowedMentions: {repliedUsers: false} })
-    if (!time) return message.reply({ embeds: [e3], allowedMentions: {repliedUsers: false} })
-    if (!reason) return reason = "none"
 
     member.timeout(ms(time), `${reason}`).catch(console.log)
 
-    message.reply({ embeds: [e4], allowedMentions: {repliedUsers: false} })
-    client.channels.cache.get("990817912229101568").send({ embeds: [e4] })
+    member.send({ embeds: [e6]}).catch(console.log)
+    message.reply({ embeds: [e5], allowedMentions: {repliedUsers: false} })
+    client.channels.cache.get("994527481027637258").send({ embeds: [e4] })
 
   },
 };

@@ -11,9 +11,7 @@ module.exports = {
         });
         function randomstatus() {
             let status = [
-                `${guild.memberCount} members`,
-                `v!help`,
-                `discord.gg/ecli`
+                `${guild.memberCount} users | .help`,
             ];
             let rstatus = Math.floor(Math.random() * status.length);
             client.user.setActivity(status[rstatus], {

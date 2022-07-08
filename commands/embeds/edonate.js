@@ -6,7 +6,7 @@ module.exports = {
     run: async(client, message, args) => {
         message.delete()
         const e1 = {
-            "description": "`.ed event / msg / req / prize`\n`.ed rumble / hello there / level 5 / 1 blob`\n\n<:dot:974223455987826719>minimum donation value is `⏣ 1,000,000` (mafia is `⏣ 2,500,000`)\n<:dot:974223455987826719>use `none` if you don't want a msg or req",
+            "description": "`.ed event / msg / req / prize`\n`.ed rumble / hello there / level 5 / 1 blob`\n\n<:ec_whitedot:994567054222962811>minimum donation value is `⏣ 1,000,000` (mafia is `⏣ 2,500,000`)\n<:ec_whitedot:994567054222962811>use `none` if you don't want a msg or req",
             "color": 3553598,
             "title": "event donations"
         }
@@ -19,7 +19,7 @@ module.exports = {
         const req = splitArgs[2]
         const prize = splitArgs[3]
         const e2 = {
-            "description": `<:dot:974223455987826719>**Event**: ${event}\n<:dot:974223455987826719>**Message**: ${msg}\n<:dot:974223455987826719>**Requirement**: ${req}\n<:dot:974223455987826719>**Prize**: ${prize}`,
+            "description": `<:ec_whitedot:994567054222962811>**Event**: ${event}\n<:ec_whitedot:994567054222962811>**Message**: ${msg}\n<:ec_whitedot:994567054222962811>**Requirement**: ${req}\n<:ec_whitedot:994567054222962811>**Prize**: ${prize}`,
             "color": 3553598,
             "title": `${message.author.tag} wants to make a donation!`,
         }

@@ -36,12 +36,16 @@ module.exports = {
         })
 
         const e4 = {
-            "description": `> <:e_dot:985270306308489356>**Offender**: ${target} (\`${target.id}\`)\n> <:e_dot:985270306308489356>**Reason**: \`${reason}\`\n> <:e_dot:985270306308489356>**Moderator**: ${message.author} (\`${message.author.id}\`)\n> <:e_dot:985270306308489356>**Timestamp** <t:${Math.round((new Date()).getTime() / 1000)}:F>`,
-            "color": 16056180,
+            "description": `> <:ec_whitedot:994567054222962811>**Offender**: ${target} (\`${target.id}\`)\n> <:ec_whitedot:994567054222962811>**Reason**: \`${reason}\`\n> <:ec_whitedot:994567054222962811>**Moderator**: ${message.author} (\`${message.author.id}\`)\n> <:ec_whitedot:994567054222962811>**Timestamp** <t:${Math.round((new Date()).getTime() / 1000)}:F>`,
+            "color": 3553598,
             "title": "unban case"
         }
+        const e5 = {
+            "description": `<a:ec_yes:990478257851858974> Successfully unbanned ${target}`,
+            "color": 9961045,
+        }
 
-        message.reply({ embeds: [e4], allowedMentions: { repliedUser: false }})
-        client.channels.cache.get("990817912229101568").send({ embeds: [e4] })
+        message.reply({ embeds: [e5], allowedMentions: { repliedUser: false }})
+        client.channels.cache.get("994527481027637258").send({ embeds: [e4] })
     }
 }

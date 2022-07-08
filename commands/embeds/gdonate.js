@@ -6,7 +6,7 @@ module.exports = {
     run: async(client, message, args) => {
         message.delete()
         const e1 = {
-            "description": "`.gd time / winners / requirement / prize / message`\n`.gd 1h / 1 / level 5 / hello there`\n\n<:dot:974223455987826719>minimum donation value is `⏣ 1,000,000`\n<:dot:974223455987826719>all donations values will be counted with the current trade price\n<:dot:974223455987826719>use `none` if you don't want a msg or req",
+            "description": "`.gd time / winners / requirement / prize / message`\n`.gd 1h / 1 / level 5 / hello there`\n\n<:ec_whitedot:994567054222962811>minimum donation value is `⏣ 1,000,000`\n<:ec_whitedot:994567054222962811>all donations values will be counted with the current trade price\n<:ec_whitedot:994567054222962811>use `none` if you don't want a msg or req",
             "color": 3553598,
             "title": "giveaway donations"
         }
@@ -20,7 +20,7 @@ module.exports = {
         const prize = splitArgs[3]
         const msg = splitArgs[4]
         const e2 = {
-            "description": `<:dot:974223455987826719>**Time**: ${time}\n<:dot:974223455987826719>**Winners**: ${winners}\n<:dot:974223455987826719>**Requirement**: ${req}\n<:dot:974223455987826719>**Prize**: ${prize}\n<:dot:974223455987826719>**Message**: ${msg}`,
+            "description": `<:ec_whitedot:994567054222962811>**Time**: ${time}\n<:ec_whitedot:994567054222962811>**Winners**: ${winners}\n<:ec_whitedot:994567054222962811>**Requirement**: ${req}\n<:ec_whitedot:994567054222962811>**Prize**: ${prize}\n<:ec_whitedot:994567054222962811>**Message**: ${msg}`,
             "color": 3553598,
             "title": `${message.author.tag} wants to make a donation!`,
         }
